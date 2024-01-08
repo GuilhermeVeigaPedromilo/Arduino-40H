@@ -2,9 +2,9 @@
 //
 void setup()
 {
-  pinMode(13, OUTPUT);
-  pinMode(7, OUTPUT);
-  pinMode(4, OUTPUT);
+  pinMode(13, OUTPUT); // Led Vermelho 
+  pinMode(7, OUTPUT); // Led Amarelo
+  pinMode(4, OUTPUT); // Led Verde
 }
 
 void loop()
