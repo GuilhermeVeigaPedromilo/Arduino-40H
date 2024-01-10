@@ -1,10 +1,11 @@
 // C++ code
 //
 
-# define LEDG 13 // Pino com nome LEDG (Led Verde)
-# define LEDR 12 // Pino com nome LEDR (Luz Vermelha)
+# define LED 13 // Pino com nome LED (LED Verde)
+# define LED1 12 // Pino com nome LED (LED Vermelha)
 
 bool x=0; // Variável Booleana 0 ou 1
+bool FLAG;
 
 void setup()
 {
@@ -18,15 +19,18 @@ void loop()
   if(digitalRead(7)==LOW && x==0)
   FLAG=1;
   if(FLAG==1)
-  {digitalWrite(LEDG, HIGH);
-  digitalWrite(LEDR, LOW);
+  {digitalWrite(LED, HIGH);
+  digitalWrite(LED1, LOW);
   delay(1000);
-  digitalWrite(LEDG, LOW);
-  digitalWrite(LEDR, HIGH);
+  digitalWrite(LED, LOW);
+  digitalWrite(LED1, HIGH);
+  delay(1000);
   x=1;}
   if(digitalRead(7)==LOW && x==1)
-  {digitalWrite(LEDG, LOW);
-  digitalWrite(LEDR, LOW);
+  FLAG=0;
+  if(FLAG==0)
+  {digitalWrite(LED, LOW);
+  digitalWrite(LED1, LOW);
   delay(1000);
   x=0;
   }
