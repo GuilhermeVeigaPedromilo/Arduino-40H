@@ -128,7 +128,7 @@ void loop() {
     Serial.print(" UMIDADE SOLO = ");
     Serial.print(nivel);
     Serial.println(" % ");
-  delay(1000);
+  delay(350);
  
 
   lcd_1.setCursor(0,1);
